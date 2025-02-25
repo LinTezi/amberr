@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="rus">
+  <head>
+    <title>Изделие крестик с янтаря</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/animate.css">
+	
+	<link rel="stylesheet" href="css/example.css" />
+	<link rel="stylesheet" href="css/pygments.css" />
+	<link rel="stylesheet" href="css/easyzoom.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+    
+    <link rel="icon" type="image/jpg" sizes="16x16" href="images/icon.jpg">
+    
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+	<!--<style>
+		/* styles unrelated to zoom */
+
+
+
+		/* these styles are for the demo, but are not required for the plugin */
+		.zoom {
+			display:inline-block;
+			position: relative;
+		}
+		
+
+
+		.zoom img {
+			display: block;
+		}
+
+		.zoom img::selection { background-color: transparent; }
+
+		#ex2 img:hover { cursor: url(grab.cur), default; }
+		#ex2 img:active { cursor: url(grabbed.cur), default; }
+	</style>
+
+<style>
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position:relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid orange;
+  border-radius: 0%;
+  cursor: none;
+  /*Установите размер увеличительного стекла:*/
+  width: 250px;
+  height: 250px;
+}
+
+
+</style>-->
+<script>
+function magnify(imgID, zoom) {
+  var img, glass, w, h, bw;
+  img = document.getElementById(imgID);
+  /*создать увеличительное стекло:*/
+  glass = document.createElement("DIV");
+  glass.setAttribute("class", "img-magnifier-glass");
+  /*вставить увеличительное стекло:*/
+  img.parentElement.insertBefore(glass, img);
+  /*установите свойства фона для увеличительного стекла:*/
+  glass.style.backgroundImage = "url('" + img.src + "')";
+  glass.style.backgroundRepeat = "no-repeat";
+  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  bw = 3;
+  w = glass.offsetWidth / 2;
+  h = glass.offsetHeight / 2;
+  /*выполните функцию, когда кто-то перемещает лупу по изображению:*/
+  glass.addEventListener("mousemove", moveMagnifier);
+  img.addEventListener("mousemove", moveMagnifier);
+  /*а также для сенсорных экранов:*/
+  glass.addEventListener("touchmove", moveMagnifier);
+  img.addEventListener("touchmove", moveMagnifier);
+  function moveMagnifier(e) {
+    var pos, x, y;
+    /*предотвратите любые другие действия, которые могут произойти при перемещении по изображению*/
+    e.preventDefault();
+    /*получить позиции курсора x и y:*/
+    pos = getCursorPos(e);
+    x = pos.x;
+    y = pos.y;
+    /*не допускайте размещения увеличительного стекла вне изображения:*/
+    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+    if (x < w / zoom) {x = w / zoom;}
+    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+    if (y < h / zoom) {y = h / zoom;}
+    /*установите положение увеличительного стекла:*/
+    glass.style.left = (x - w) + "px";
+    glass.style.top = (y - h) + "px";
+    /*покажите что такое лупа:*/
+    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*получить x и y позиции изображения:*/
+    a = img.getBoundingClientRect();
+    /*вычислите координаты курсора x и y относительно изображения:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*рассмотрим любую прокрутку страницы:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- телефон -->
+    
+    
+    <div class="site-navbar-wrap js-site-navbar bg-white">
+      
+      <div class="container">
+        <div class="site-navbar bg-light">
+          <div class="py-1">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <h2 class="mb-0 site-logo"><a href="#">Янтарь</a></h2>
+              </div>
+              <div class="col-10">
+                <nav class="site-navigation text-right" role="navigation">
+                  <div class="container">
+                    <!-- нету -->
+                    <div class="d-inline-block  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-view_headline h3"></span></a></div>
+                     <!-- блок -->
+                    <ul class="site-menu js-clone-nav d-none">
+                      <li>
+                        <a href="index.html">Домой</a>
+                      </li>
+                      <li class="active"><a href="all-product.html">Изделия(крестик)</a></li>
+                      <li><a href="#">Не работает</a></li>
+                      <li><a href="contact-inform.html">Контакты</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+
+	<div class="container">
+	
+		<section id="example ">
+
+                             			<br><br><h1 class="col-10" style="color:#ffa500; margin-left:20%;">Янтарь (крестик)</h1>
+			<div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails">
+				<a href="example-images/1zoom_1.jpg"> 
+					<img src="example-images/1standard_1.jpg" alt="" style="max-width:100%; height:auto ;" />
+				</a>
+			</div>
+
+			<ul class="thumbnails" style="list-style-type:none ;">
+				<li>
+					<a href="example-images/1zoom_1.jpg" data-standard="example-images/1standard_1.jpg">
+						<img class="imga" src="example-images/1thum_1.jpg" alt="" />
+					</a>
+				</li>
+				<li>
+					<a class="imga" href="example-images/4zoom_4.jpg" data-standard="example-images/4standard_4.jpg">
+						<img style="margin-left:8%; " class="imga" src="example-images/4thum_4.jpg" alt="" />
+					</a>
+				</li>
+				<li>
+					<a class="imga" href="example-images/5zoom_5.jpg" data-standard="example-images/5standard_5.jpg">
+						<img style="margin-left:18%; " class="imga" src="example-images/5thum_5.jpg" alt="" />
+					</a>
+				</li>
+				<!--<li>
+					<a class="imga" href="example-images/4_zoom_4.jpg" data-standard="example-images/4_standard_4.jpg">
+						<img style="margin-left:28%; " class="imga" src="example-images/4_thum_4.jpg" alt="" />
+					</a>
+				</li>-->
+			</ul>
+		</section>
+	</div>
+
+
+          <div class="check col-md-5 col-lg-5">
+            <h2 class="font-weight-bold text-uppercase display-3"><h1 class="d-block">Описание</h1></h2>
+			<h6>Артикул:   </h6>
+            <h6>Тип: браслет  </h6>
+			<h6 class="text-6">Средний вес: </h6>
+            <h6 class="text-6">Материал:</h6>
+			<h6 class="text-6">Размер камня:</h6>
+			<h6 class="text-6">Длина нити:</h6>
+			<h3>Цена: 2200руб</h3>
+            <button class="btn btn-primary px-4 py-2 text-uppercase " style="background-color:#ffa500 ; border-color:#ffa500 ; margin-top:-10px ;">Заказать</button>
+            <div class="block_with_text" style="display:none ;"><br>
+			
+	<form class="forma text-center" action="php/two_amber.php" method="post" target="_blank" name="f1">
+	  <input  class="input" type="text" placeholder="Ваше имя" name="name1" required>
+	  <br>
+	  <br>
+	  <input class="input" type="email" placeholder="Ваш email" name="email1" required="required">
+	  <br>
+	  <br>
+	  <input class="input" type="number" placeholder="Ваш номер телефона" name="tel" required="required">
+	  <br>
+	  <br>
+	  <textarea  class="input" placeholder="Ваш текст" name="text" required="required"></textarea>
+	  <br>
+	  <br>
+	  <p><input type="checkbox" name="person" required="required" value="Я даю согласие на обработку персональных данных.">Я даю согласие на обработку персональных данных.</p>
+	  
+	  <input class="btn btn-primary  px-4 py-3 " style="background-color:#ffa500 ; border-color:#ffa500 ;" id="submit" type="submit" value="ЗАКАЗАТЬ" name="sab">
+	</form>
+			</div>
+		  </div>
+          
+
+
+
+    
+    <footer class="site-footer" style="background-image: url('images/back_phone.jpg');">
+      <div class="container">
+        
+
+        <div class="row">
+          <div class="col-md-4" style="margin-top:-16px ; margin-left:65px ;">
+            <h3 class="footer-heading mb-4 " style="color:#ffa500;">Jonix</h3>
+            <p>Сила в правде.</p>
+            <p><a href="https://www.youtube.com/c/Jonix39" target="-blank" class="btn btn-primary pill text-white px-4">Youtube</a></p>
+          </div>
+		  
+
+
+
+          <div class="col-md-2" style="margin-left:50px ;">
+            <div class="col-md-12"><h3 class="footer-heading mb-4 " style="margin-left:00px ; color:#ffa500 ;">Соц.сети</h3></div>
+<div class="block-social">
+<div class="icon-messenger">
+    <a href="#" class="facebook" ><img src="images/facebook-i.png" ></a></img>
+    <a href="https://vk.com/jonix39" class="vk" ><img src="images/vk-i.png"></a></img>
+    <a href="#" class="ok" ><img src="images/ok-i.png"></a></img>
+</div>
+<div class="icon-messenger2">
+    <a href="https://www.youtube.com/c/Jonix39" class="youtube" ><img src="images/youtube-i.png"></a></img>
+    <a href="https://www.instagram.com/jonix39/" class="instagram" ><img src="images/instagram-i.png"></a></img>
+</div>
+</div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p style="margin-top:-80px ;">
+			<p style="text-align:center ; color:red ;"> Информация о товарах находящиеся на сайте, носит описательный характер и предназначена для ознакомительных целей и ни как не является публичной офертой согласно <a href="http://www.consultant.ru/document/cons_doc_LAW_5142/" style="text-decoration:underline ; color:red ; " target="_blank ">Граждноского Кодекса Российской Федерации.</a> <p>
+            Jonix &reg; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> Янтарные изделия
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+  
+  	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="js/easyzoom.js"></script>
+	<script>
+		// Instantiate EasyZoom instances
+		var $easyzoom = $('.easyzoom').easyZoom();
+
+		// Setup thumbnails example
+		var api1 = $easyzoom.filter('.easyzoom--with-thumbnails').data('easyZoom');
+
+		$('.thumbnails').on('click', 'a', function(e) {
+			var $this = $(this);
+
+			e.preventDefault();
+
+			// Use EasyZoom's `swap` method
+			api1.swap($this.data('standard'), $this.attr('href'));
+		});
+
+		// Setup toggles example
+		var api2 = $easyzoom.filter('.easyzoom--with-toggle').data('easyZoom');
+
+		$('.toggle').on('click', function() {
+			var $this = $(this);
+
+			if ($this.data("active") === true) {
+				$this.text("Switch on").data("active", false);
+				api2.teardown();
+			} else {
+				$this.text("Switch off").data("active", true);
+				api2._init();
+			}
+		});
+	</script>
+  
+  
+  <script src="js/mediaelement-and-player.min.js"></script>
+
+  <script src="js/main.js"></script>
+    
+
+
+  </body>
+</html>
