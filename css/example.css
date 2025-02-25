@@ -1,0 +1,8 @@
+/*.easyzoom {
+	margin-left:-35% ;
+	margin-top:-35% ;
+}
+
+@media screen and (max-width: 200px){
+ .easyzoom { width:640px ; height:360px ;}
+}*/
